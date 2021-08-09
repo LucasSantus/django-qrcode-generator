@@ -9,7 +9,8 @@ class Generated(models.Model):
     
     image = models.ImageField(
         verbose_name = "Image",
-    )  
+        upload_to = 'image'
+    )
 
     class Meta:
         verbose_name = "Generated"
