@@ -44,7 +44,6 @@ INSTALLED_APPS = [
 
 # APP's Internas
 INSTALLED_APPS += [
-    'qrcode',
     'home',
 ]
 
