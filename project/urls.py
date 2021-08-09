@@ -8,5 +8,5 @@ from apps.home.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="home"),
+    path('', index, name="index"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
