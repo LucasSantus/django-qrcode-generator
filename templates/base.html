@@ -2,9 +2,6 @@
 
 <html> 
     <head>
-        <!-- Import Material Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
         <!--Import CSS Materialize-->
         <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection"/>
 
@@ -30,6 +27,7 @@
     </head>
 
     <body class="bg-body">
+
         <!-- MAIN -->
         <main>
             {% block content %}
@@ -39,20 +37,10 @@
         <!-- FOOTER -->
         <footer class="page-footer transparent">
             <div class="row w-70">
-                <div class="col s12 center text-dark fs-7">
+                <div class="col s12 center text-secondary fs-7">
                     <span>&copy; 2020 Copyright QR Coder Generated, Todos os direitos reservados.</span>
                 </div>
             </div>
         </footer>
-
-        <!-- Import JQuery -->
-        <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
-
-        <!-- Import Java Script Materialize -->
-        <!-- <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script> -->
-
-        <!-- Script da Página -->
-        {% block javascript %}
-        {% endblock %}
     </body>
 </html>

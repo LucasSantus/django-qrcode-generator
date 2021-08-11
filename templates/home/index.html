@@ -10,11 +10,7 @@
                 <!-- Barra de Inserção -->
                 <form method="POST">
                     {% csrf_token %}
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input placeholder="Insira a URL:" id="link" type="text" class="validate" name="link">
-                        </div>
-                    </div>
+                    <input placeholder="Insira a URL:" id="link" type="text" class="validate px-3" name="link">
                 </form>
             </div>
             <div class="col s12">
@@ -26,7 +22,17 @@
     </div>  
 {% endblock content %}
 
+{% block css %}
+    <style>
+        input:not([type]), input[type=date]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=email]:not(.browser-default), input[type=number]:not(.browser-default), input[type=password]:not(.browser-default), input[type=search]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=text]:not(.browser-default), input[type=time]:not(.browser-default), input[type=url]:not(.browser-default), textarea.materialize-textarea {
+            background-color: white;
+            border-bottom: 0px solid #9e9e9e;
+            border-radius: 50px;
+        }
+    </style>
+{% endblock %}
+
 <!-- Block Título da Página -->
 {% block title %}
-    Dashboard
+    {{page_title}}
 {% endblock %}
