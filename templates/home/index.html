@@ -7,11 +7,13 @@
     <div class="item-center">
         <div class="row">
             <div class="col s12">
+                <div class="container">
                 <!-- Barra de Inserção -->
-                <form method="POST">
-                    {% csrf_token %}
-                    <input placeholder="Insira a URL:" id="link" type="text" class="validate px-3" name="link">
-                </form>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input placeholder="    Insira a URL:" id="link" type="text" class="validate" name="link">
+                    </form>
+                </div>
             </div>
             <div class="col s12">
                 <div class="center">
@@ -30,9 +32,4 @@
             border-radius: 50px;
         }
     </style>
-{% endblock %}
-
-<!-- Block Título da Página -->
-{% block title %}
-    {{page_title}}
 {% endblock %}
