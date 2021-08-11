@@ -1,31 +1,28 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 <!-- Block Conteúdo da Página -->
 {% block content %}
+    <div class="item-center">
+        <div class="row">
+            <div class="col s12">
+                <!-- Barra de Inserção -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Insira a URL:" id="link" type="text" class="validate" name="link">
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-    <!-- Barra de Inserção -->
-    <div class="container">
-        <div class="container">
-            <form method="POST">
-                {% csrf_token %}
-                <div class="input-field">
-                    <i class="material-icons prefix">insert</i>
-                    <input type="text" name="insert" id="insert">
-                    <label for="insert">URL:</label>    
-                </div>
-            </form>
-        </div>
-    </div>
-
-    {% if salas %}
-        a
-    {% else %}
-        <div class="container center mt-10">
-            <div class="fs-4 text-secondary">
-                Não há salas disponíveis.
+            <div class="col s12">
+                <img class="materialboxed" width="300" height="300" src="{% static 'image/image.svg' %}">
             </div>
         </div>
-    {% endif %}
+    </div>  
 {% endblock content %}
 
 <!-- Block Título da Página -->

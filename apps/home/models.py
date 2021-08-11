@@ -1,4 +1,6 @@
 from django.db import models
+
+from PIL import Image
 import pyqrcode
 
 class Generated(models.Model):
@@ -6,11 +8,8 @@ class Generated(models.Model):
         verbose_name = "URL",
         max_length = 255,
     )
-    
-    image = models.ImageField(
-        verbose_name = "Image",
-        upload_to = 'image/'
-    )
+
+    image = models.ImageField(upload_to = "image/")
 
     class Meta:
         verbose_name = "Generated"
@@ -18,9 +17,7 @@ class Generated(models.Model):
         
     def generated_qrcode(self):
         code = pyqrcode.create(self.url)
-        code.svg ('oondev.svg', scale = 8)
-        code.eps ('oondev.eps', scale = 2)
-        print (code.terminal (quiet_zone = 1))
+        return code.svg("static/image/image.svg", scale = 8)
 
     def __str__(self):
         return self.url
