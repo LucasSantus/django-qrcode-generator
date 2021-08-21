@@ -11,7 +11,9 @@
                 <!-- Barra de Inserção -->
                     <form method="POST">
                         {% csrf_token %}
-                        <input placeholder="    Insira a URL:" id="link" type="text" class="validate" name="link">
+                        <div class="px-3">
+                            <input placeholder="Insira a URL:" id="link" type="text" class="validate p-1" name="link">
+                        </div>
                     </form>
                 </div>
             </div>
