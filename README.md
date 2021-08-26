@@ -1,12 +1,13 @@
 <h1 align="center">QRCode Generated</h1>
 
 <p align="center">
- <a href="#sobre">Sobre</a> &nbsp;|&nbsp;
- <a href="#porque">Por Que</a> &nbsp;|&nbsp;
- <a href="#tecnologias">Tecnologias</a> &nbsp;|&nbsp;
- <a href="#funcionalidades">Funcionalidades</a> &nbsp;|&nbsp;
- <a href="#autor">Autor</a> &nbsp;|&nbsp;
- <a href="#license">Licença</a>
+	<a href="#sobre">Sobre</a> &nbsp;|&nbsp;
+	<a href="#porque">Por Que</a> &nbsp;|&nbsp;
+	<a href="#tecnologias">Tecnologias</a> &nbsp;|&nbsp;
+	<a href="#funcionalidades">Funcionalidades</a> &nbsp;|&nbsp;
+	<a href="#instalando">Instalando</a> &nbsp;|&nbsp;
+	<a href="#autor">Autor</a> &nbsp;|&nbsp;
+	<a href="#license">Licença</a>
 </p>
 
 <h6 align="center"> 
