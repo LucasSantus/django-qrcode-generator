@@ -1,14 +1,13 @@
 from django.shortcuts import render
-from home.models import *
-
 import pyqrcode
 
 def generated_qrcode(url):
     code = pyqrcode.create(url)
     code.svg("static/image/image.svg", scale = 8)
+    print("gerado")
 
 def index(request):
-    if request.POST:
+    if request.method == "POST":
         link = request.POST.get("link", "https://github.com/LucasSantus/")
         generated_qrcode(link)
 
