@@ -4,35 +4,54 @@
 
 <!-- Block Conteúdo da Página -->
 {% block content %}
-    <div class="item-center">
-        <div class="row">
-            <div class="col s12">
-                <div class="container">
-
-                <!-- Barra de Inserção -->
-                    <form method="POST">
-                        {% csrf_token %}
-                        <div class="container center py-3">
-                            <input placeholder="  Insira a URL:" id="link" type="text" class="validate ps-1" name="link">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col s12">
-                <div class="center">
+    <div class="row w-100">
+        <div class="col-12 col-md-6 vh-100 d-flex justify-content-center align-items-center p-4">
+            <div class="h-75 w-75 bg-dark rounded__custom d-flex flex-column justify-content-center align-items-center">
+                <form method="POST" class="w-100 d-flex justify-content-center">
+                    {% csrf_token %}
+                    <input type="email" class="form-control fs-6 ps-3 w-75" id="link" name="link" type="text" placeholder="Insira a URL:">
+                </form>
+                <div class="d-flex d-sm-none flex-column bg-white rounded__custom">
                     <img width="350" height="350" src="{% static 'image/image.svg' %}">
                 </div>
             </div>
         </div>
-    </div>  
-{% endblock content %}
+        
+        <div class="col-12 col-md-6 vh-100 d-none d-md-flex justify-content-center align-items-center p-4">
+            <div class="h-75 w-75 bg-danger rounded__custom d-flex justify-content-center align-items-center">
+                <img width="350" height="350" src="{% static 'image/image.svg' %}">
+            </div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block css %}
     <style>
-        input:not([type]), input[type=date]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=email]:not(.browser-default), input[type=number]:not(.browser-default), input[type=password]:not(.browser-default), input[type=search]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=text]:not(.browser-default), input[type=time]:not(.browser-default), input[type=url]:not(.browser-default), textarea.materialize-textarea {
-            border: solid #e0e0e0 1px !important;
-            border-bottom: 0px solid #797979;
-            border-radius: 50px;
+        .rounded__custom{
+            border-radius: 30px;
+        }
+        #link{
+            width: 400px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #link {
+                width: 100%;
+            }
+
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            img{
+                width: 100%;
+            }
         }
     </style>
 {% endblock %}
+
