@@ -1,0 +1,119 @@
+/* ROOT VARIABLES */
+:root{
+    --body: white;
+    --primary-color: #000000;
+
+    --primary-color-focus: #2e364b;
+    --secondary-color: #4d4d5f;
+    --secondary-color-focus: #434453;
+    --third-color: #5e5e6e;
+    --third-color-focus: rgb(81, 85, 99);
+    --four-color: #40445A;
+    --light-color: white;
+
+    --title-color: #b8b8b8;
+    --description-color: #7a7d80;
+    --border-color: #8B949E;
+}
+
+/* BUTTON COLORS */
+.btn__custom__primary,
+.btn__custom__primary:hover{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 1px solid var(--four-color);
+    cursor: pointer;
+}
+
+.btn__custom__primary:focus{
+    background-color: var(--primary-color-focus);
+    color: var(--light-color);
+    border: 1px solid var(--four-color);
+    cursor: pointer;
+}
+
+.btn__custom__secondary,
+.btn__custom__secondary:hover{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    border: 1px solid var(--four-color);
+    cursor: pointer;
+}
+
+.btn__custom__secondary:focus{
+    background-color: var(--secondary-color-focus);
+    color: var(--light-color);
+    border: 1px solid var(--four-color);
+    cursor: pointer;
+}
+
+.bg__custom__secondary{
+    background-color: var(--secondary-color) !important;
+}
+
+/* TEXT COLORS */
+.text__custom__primary{
+    color: var(--primary-color) !important;
+}
+
+.text__custom__secondary{
+    color: var(--secondary-color) !important;
+}
+
+.text__custom__third{
+    color: var(--third-color) !important;
+}
+
+.text__title{
+    color: var(--title-color);
+}
+
+.text__description{
+    color: var(--description-color);
+}
+
+/* OPACITY ITEMS */
+.opacity__hover:hover{
+    opacity: .6 !important;
+}
+
+/* OTHERS */
+.help-block{
+    color: red;
+}
+
+.border-color{
+    border: 1px solid var(--border-color) !important;
+}
+
+/* TOOLBAR */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    opacity: .6;
+}
+
+/* Seletor Bootstrap */
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+/* FOOTER */
+body {
+    background-color: var(--body);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
