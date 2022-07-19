@@ -8,8 +8,6 @@ sys.path.append(
     os.path.join(BASE_DIR, "apps")
 )
 
-# SECRET_KEY = 'django-insecure-%!ibzd&68#jxqpqazrn%=ywuymc!69l(xw)bl(odikr27@u5*h'
-
 SECRET_KEY = str(os.environ.get('SECRET_KEY', "django-insecure-900u2i6xbp12y#l7-%ch9h(w(jxj17n)c1btv1p=$6$iz27t7m"))
 
 DEBUG = int(os.environ.get('DEBUG', 1))
