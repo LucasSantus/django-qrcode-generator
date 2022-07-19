@@ -7,9 +7,11 @@
     <div class="w-100">
         <div class="vh-100 d-flex justify-content-center align-items-md-center pt-5">
             <div class="card__qr__code bg__custom__secondary rounded__custom d-flex flex-column justify-content-center align-items-center position-relative shadow border__custom">
-                <form method="POST" class="w-100 d-flex justify-content-center position-absolute top-0 start-50 translate-middle ">
+                <form method="POST" class="w-100 d-flex justify-content-center position-absolute top-0 start-50 translate-middle">
                     {% csrf_token %}
-                    <input type="email" class="form-control fs-6 ps-3 w-75 rounded__custom shadow-lg" id="link" name="link" type="text" placeholder="Insira a URL:">
+                    <input type="text" class="form-control fs-6 ps-3 w-75 rounded__start__custom shadow-lg" id="link" name="link" type="text" placeholder="Insira a URL:">
+                    
+                    <button class="btn btn-primary rounded__end__custom" type="button">Gerar</button>
                 </form>
                 <div class="d-flex justify-content-center align-items-center mt-5 flex-column bg-white rounded-3 p-0 m-0">
                     <img width="350" height="350" src="{% static 'image/image.svg' %}">
@@ -51,23 +53,3 @@
         }
     </style>
 {% endblock %}
-
-<!-- <div class="row w-100">
-    <div class="col-12 col-md-6 vh-100 d-flex justify-content-center align-items-center p-2">
-        <div class="h-75 w-75 bg-dark rounded__custom d-flex flex-column justify-content-center align-items-center">
-            <form method="POST" class="w-100 d-flex justify-content-center">
-                {% csrf_token %}
-                <input type="email" class="form-control fs-6 ps-3 w-75" id="link" name="link" type="text" placeholder="Insira a URL:">
-            </form>
-            <div class="d-flex d-md-none mt-5 flex-column bg-white rounded__custom">
-                <img width="350" height="350" src="{% static 'image/image.svg' %}">
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-12 col-md-6 vh-100 d-none d-md-flex justify-content-center align-items-center p-2">
-        <div class="h-75 w-75 bg-danger rounded__custom d-flex justify-content-center align-items-center">
-            <img width="350" height="350" src="{% static 'image/image.svg' %}">
-        </div>
-    </div>
-</div> -->
