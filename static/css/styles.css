@@ -35,7 +35,17 @@
 
 /* ROUNDED CUSTOM */
 .rounded__custom{
-    border-radius: 40px;
+    border-radius: 40px
+}
+
+.rounded__start__custom{
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.rounded__end__custom{
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
 }
 
 /* OTHERS */
