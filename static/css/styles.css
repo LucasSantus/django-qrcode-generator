@@ -1,56 +1,6 @@
-/* ROOT VARIABLES */
-:root{
-    --body: white;
-
-    --primary-color: white;
-    --secondary-color: #BBC4C2;
-}
-
-/* BACKGROUND COLORS */
-.bg__custom__primary{
-    background-color: var(--primary-color) !important;
-}
-
-.bg__custom__secondary{
-    background-color: var(--secondary-color) !important;
-}
-
-/* TEXT COLORS */
-.text__custom__primary{
-    color: var(--primary-color) !important;
-}
-
-.text__custom__secondary{
-    color: var(--secondary-color) !important;
-}
-
-.border__custom{
-    border: 1px solid #a1a7a5 !important;
-}
-
 /* OPACITY ITEMS */
 .hover:hover{
     opacity: .6 !important;
-}
-
-/* ROUNDED CUSTOM */
-.rounded__custom{
-    border-radius: 40px
-}
-
-.rounded__start__custom{
-    border-bottom-left-radius: 40px;
-    border-top-left-radius: 40px;
-}
-
-.rounded__end__custom{
-    border-bottom-right-radius: 40px;
-    border-top-right-radius: 40px;
-}
-
-/* OTHERS */
-.help-block{
-    color: red;
 }
 
 /* TOOLBAR */
@@ -75,9 +25,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* FOOTER */
 body {
-    background-color: var(--body);
     display: flex;
     min-height: 100vh;
+    min-width: 100vh;
     flex-direction: column;
 }
 
