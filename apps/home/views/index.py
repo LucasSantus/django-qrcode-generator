@@ -5,7 +5,7 @@ from home.default_messages import *
 
 def generated_qrcode(request, url):
     code = pyqrcode.create(url)
-    code.svg("static/image/image.svg", scale = 8)
+    code.svg("static/images/image.svg", scale = 8)
     messages.success(request, DEFAULT_MESSAGES["QRCODE_ADD"])
 
 def index(request):
