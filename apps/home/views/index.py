@@ -1,16 +1,19 @@
 from django.shortcuts import render
 import pyqrcode
 from django.contrib import messages
-from home.default_messages import *
+
 
 def generated_qrcode(request, url):
     code = pyqrcode.create(url)
-    code.svg("static/images/image.svg", scale = 8)
-    messages.success(request, DEFAULT_MESSAGES["QRCODE_ADD"])
+    code.svg("static/images/image.svg", scale = 7)
 
 def index(request):
+    base_url = "https://github.com/LucasSantus/"
     if request.method == "POST":
-        link = request.POST.get("link", "https://github.com/LucasSantus/")
+        link = request.POST.get("link", base_url)
         generated_qrcode(request, link)
+    else:
+        generated_qrcode(request, base_url)
 
     return render(request, "home/index.html")
+    
